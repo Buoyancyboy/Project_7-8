@@ -1,7 +1,6 @@
 import sys
 import socket
 import json
-import pandas as pd
 from PyQt5.QtWidgets import QApplication, QMainWindow, QPushButton, QVBoxLayout, QWidget, QLabel, QDateTimeEdit
 from datetime import datetime
 from influxdb import InfluxDBClient
