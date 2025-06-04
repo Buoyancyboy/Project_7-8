@@ -182,8 +182,8 @@ time.sleep(1)  # Wachten tot de client is verbonden en klaar is met subscriben
 # Voorbeeld: stuur metadata-bericht (in praktijk gebeurt dit via MQTT publish)
 CLIENT.publish_message("metadata", "|sensor1|in:test/topic,other/in|out:result/topic", retain=True)
 
-CLIENT.publish_message("test/topic", "Hello, MQTT!", retain=True)
-CLIENT.publish_message("test/topic", "Yo, MQTT!", retain=True)
+CLIENT.publish_message("topics/sensor_warmth", "Hello, MQTT!", retain=True)
+CLIENT.publish_message("topics/stopwatch_boldness", "Yo, MQTT!", retain=True)
 get_messages_from_db()
 
 while True:
