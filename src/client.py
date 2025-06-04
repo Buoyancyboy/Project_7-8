@@ -19,15 +19,10 @@ class BrokerClient:
 
 		self.connect_broker()
 
-<<<<<<< HEAD
-=======
-
->>>>>>> 49a0ee8e8f620b88824b56a15493623f78fbc0b1
 	def connect_broker(self):
 		self.CLIENT.connect(self.OPTIONS.BROKER_ADDRESS, self.OPTIONS.BROKER_PORT)
 		self.CLIENT.loop_start()
 
-<<<<<<< HEAD
 	def publish_message(self, topic, payload, qos=0, retain=False):
 		result = self.CLIENT.publish(topic, payload, qos, retain)
 		if result.rc != mqtt.MQTT_ERR_SUCCESS:
@@ -35,8 +30,6 @@ class BrokerClient:
 		else:
 			print(f"Message published to topic '{topic}'")
 
-=======
->>>>>>> 49a0ee8e8f620b88824b56a15493623f78fbc0b1
 	# def discover_topics():
 
 def on_connect(client, userdata, flags, reason_code, properties):
@@ -53,10 +46,3 @@ def on_subscribe(client, userdata, mid, reason_code_list, properties):
 
 def on_message(client, userdata, message):
 	print("On " + message.topic + ": " + message.payload.decode())
-
-
-
-<<<<<<< HEAD
-=======
-
->>>>>>> 49a0ee8e8f620b88824b56a15493623f78fbc0b1
