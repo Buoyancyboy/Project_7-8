@@ -1,4 +1,5 @@
 services:
+<<<<<<< HEAD
   broker:
     image: eclipse-mosquitto
     volumes:
@@ -17,3 +18,13 @@ services:
     command: python main.py
     ports:
       - "5000:5000"
+=======
+    broker:
+        image: eclipse-mosquitto
+        volumes:
+            - ./mosquitto/config:/mosquitto/config
+            - ./mosquitto/data:/mosquitto/data
+            - ./mosquitto/log:/mosquitto/log
+        ports:
+            - "127.0.0.1:1883:1883"
+>>>>>>> 49a0ee8e8f620b88824b56a15493623f78fbc0b1

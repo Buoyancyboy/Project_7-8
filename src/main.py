@@ -1,5 +1,6 @@
 import client as c
 import time
+<<<<<<< HEAD
 import sqlite3
 
 BROKER_URL = "broker"
@@ -142,3 +143,15 @@ get_messages_from_db()
 
 while True:
     time.sleep(3)
+=======
+
+BROKER_URL = "localhost"
+
+OPTIONS = c.ClientOptions(BROKER_URL,name="Broker1")
+CLIENT = c.BrokerClient(OPTIONS)
+
+CLIENT.CLIENT.subscribe("#")
+
+while (True):
+	time.sleep(3)
+>>>>>>> 49a0ee8e8f620b88824b56a15493623f78fbc0b1
