@@ -1,0 +1,19 @@
+services:
+  broker:
+    image: eclipse-mosquitto
+    volumes:
+      - ./mosquitto/config:/mosquitto/config
+    ports:
+      - "1883:1883"
+
+  python-app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ./src:/app
+      - ./data:/app/data
+    working_dir: /app 
+    command: python main.py
+    ports:
+      - "5000:5000"
