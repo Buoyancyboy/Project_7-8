@@ -3,7 +3,7 @@ FROM python:3.9-slim
 # Stel de werkdirectory in
 WORKDIR /app
 
-COPY ./src/requirements.txt /app/requirements.txt
+COPY ./src/ /app/
 
 # Installeer de benodigde Python-pakketten
 RUN pip install --upgrade pip
