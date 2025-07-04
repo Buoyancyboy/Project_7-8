@@ -1,0 +1,75 @@
+/* SearchByTimestamp.css */
+
+body {
+  /* Background image with diagonal gradient mask */
+  background-image:
+          linear-gradient(
+                  to top right,
+                  rgba(0, 0, 0, 0.7) 33%,       /* bottom-left: mostly black */
+                  rgba(0, 0, 0, 0.8) 66%,        /* middle: transparent */
+                  rgba(0, 0, 0, 0.9) 100%      /* top-right: mostly black */
+          ),
+          url('./Graph.jpg'); /* Replace with your actual image path */
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  color: white;
+  font-family: Arial, sans-serif;
+  min-height: 100vh;
+  margin: 0;
+}
+
+.table-fuckery {
+  background-color: darkslategray;
+  border-color: darkslategray;
+  color: white;
+  height: 50%;
+  width: 400px;
+  padding: 0.5rem;
+  font-size: 1rem;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  text-align: center;
+}
+
+
+.btn-primary {
+  background-color: transparent;
+  color: #008080;
+  border: 2px solid #008080;
+  width: 400px;
+  height: 50px;
+  border-radius: 25px;
+  position: relative;
+  overflow: hidden; /* prevent pseudo-element overflow */
+}
+
+.btn-primary::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 100%;
+  border-radius: 25px;
+  top: 0;
+  background-color: #008080;
+  transition: all 0.5s ease;
+  left: 50%;
+  transform: translate(-50%, 0);
+  z-index: -1;
+}
+
+.btn-primary:hover::after {
+  width: 100%;
+}
+
+.btn-primary:hover {
+  color: white;
+}
+
+.btn-primary:disabled {
+  background-color: #002244;
+  cursor: not-allowed;
+  opacity: 0.7;
+}
